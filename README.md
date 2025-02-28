@@ -1,6 +1,8 @@
 # ClamAV
 ClamAv_Usage
 
+# Sur Linux
+
 ## Installation:
 ```sudo apt update && sudo apt install clamav -y```
 
@@ -18,3 +20,25 @@ ClamAv_Usage
 ```sudo systemctl restart clamav-freshclam```
 ```sudo freshclam```
 
+
+# Sur Windos
+Installer clamAv via l'invite de commande winget:
+![Installation ClamAV avec Winget](./images/winget-install.png)
+Vérifier que clamAV abien été installé via la commande:
+```winget list clamav```
+![Vérifier ClamAV avec Winget](./images/winget-list.png)
+
+# Mettre à jour la signature de clamAV:
+Naviguer dans le dossier C:\Program Files\ClamAV\conf_examples
+![freshclam-conf](./images/freshclam-conf.png)
+Copier-coller le fichier **freshclam.conf.sample** dans le dossier racine C:\Program Files\ClamAV\
+Puis renommer le en **freshclam.conf** en décommentant le chemin de la base de donnée (Assurez vous que la ligne Example soit commenté #Example).
+![freshclam-set](./images/freshclam-set.png)
+
+```& "C:\Program Files\ClamAV\freshclam.exe" -v```
+![update](./images/update.png)
+
+# Lancer le scan sur Windows via posershell:
+```clamscan -r C:\Users\"votre_nom_utilisateur"\Desktop```
+![Scanning](./images/Scanning.png)
+![Result](./images/result.png)
