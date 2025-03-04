@@ -28,6 +28,8 @@ Vérifier que clamAV abien été installé via la commande:
 ```winget list clamav```
 ![Vérifier ClamAV avec Winget](./images/winget-list.png)
 
+# Ajouter en variable d'environnement via:
+```setx PATH "$env:Path;C:\Program Files\ClamAV" /M```
 # Mettre à jour la signature de clamAV:
 Naviguer dans le dossier C:\Program Files\ClamAV\conf_examples
 ![freshclam-conf](./images/freshclam-conf.png)
